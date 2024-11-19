@@ -24,12 +24,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
-        <version>3.3.2</version> <!-- Use a newer version -->
+        <version>3.3.2</version>
         <configuration>
-          <!-- If you do not have web.xml, set failOnMissingWebXml to false -->
+          <!-- Specify web.xml location if needed -->
+          <webxml>src/main/webapp/WEB-INF/web.xml</webxml> <!-- Specify web.xml location here -->
+          <!-- If you don't have a web.xml, you can disable the check by setting this to false -->
           <failOnMissingWebXml>false</failOnMissingWebXml>
-          <!-- Optional: Set webxml path if you have a custom web.xml -->
-          <!-- <webxml>path/to/your/web.xml</webxml> -->
         </configuration>
       </plugin>
     </plugins>
